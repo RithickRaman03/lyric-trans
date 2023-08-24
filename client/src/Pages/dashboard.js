@@ -1,11 +1,11 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState,useEffect} from 'react'
 import axios from 'axios';
-
+import { useNavigate } from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/js/dist/modal.js';
 
-const Dashboard =()=>{
+const Dashboard =()=>{  
     const [data, setData] = useState([]);
     const [titles,setTitles] = useState([]);
     const [isDeleted, setisDeleted] = useState(0);
@@ -17,6 +17,8 @@ const Dashboard =()=>{
         language:'',
         role:'',
       })
+
+    const navigate = useNavigate();
       
     useEffect(()=>{
         const getdata =async()=>{
@@ -77,18 +79,24 @@ const Dashboard =()=>{
                     console.log(error);
                 }  
                 setisDeleted(!isDeleted); 
-                $('#modal').modal('hide');
-            
-            }
-            
                
             
+            }
 
+    const handleDetails = (id) =>{
+        console.log(id);
+        navigate('/userdetails',{state: {"id": id}});
+    }
+
+               
     return (  
-       <div>
+       <div  className='full'>
         <h1>User Details</h1>
+    
+        
           <div className='table' id='table'>
-            <table>
+          <table class="table table-striped table-hover">
+
                 <thead>
                 <tr>
                     {
@@ -105,16 +113,18 @@ const Dashboard =()=>{
                             {Object.keys(indidata).map((key)=> (    
                             <td key={key}>
                                 {indidata[key]}
-                            </td>
+                            </td>   
                             ))}
-                            <button type="button"onClick={()=>{handleEdit(indidata)}} class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" >Edit</button>
-                            <button type="button"onClick={()=>{handleDelete(indidata.id)}} class="btn btn-primary">Delete</button>
+                             <button type="button" onClick={()=>handleDetails(indidata.id)} id={"detailbutton"}>Details</button>
+                            <button type="button"onClick={()=>{handleEdit(indidata)}} className='btn btn-primary' id='editbutton'  data-bs-toggle="modal" data-bs-target="#exampleModal" >Update</button>
+                            <button type="button"onClick={()=>{handleDelete(indidata.id)}} class="btn btn-primary" id='deletebutton'>Delete</button>
                         </tr>
                     ))
                     }
                 
                 </tbody>
             </table> 
+
 
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -131,7 +141,7 @@ const Dashboard =()=>{
                     Role: <input type="text" name='role' id='role' defaultValue={changedData.role} onChange={handleChanges}/>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary "  data-bs-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary" onClick={handleSubmit} data-bs-dismiss="modal">Save changes</button>
                 </div>
                 </div>

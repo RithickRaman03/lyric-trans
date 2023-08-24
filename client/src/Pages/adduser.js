@@ -36,11 +36,12 @@ function Adduser() {
      
 
   return (
-    <div>
+    <div >
         <h1>Create New user</h1>
     
     
-    <form>
+    <form >
+      <div className='wholecontent'>
        <div className="Name">
          <label htmlFor='name'>Name:</label>
          <input type='text'
@@ -138,6 +139,7 @@ function Adduser() {
               </select>
               
               <br/>
+     </div>
      </div>
      <br/>
        
