@@ -1,8 +1,8 @@
 import React,{useState} from 'react';
-import PasswordChecklist from "react-password-checklist";
 import axios from 'axios';
 
 function Adduser() {
+    const [ckpwd, setckpwd] = useState(false);
     const [data,setData] = useState({
         Username: "",
         Email:"",
@@ -31,15 +31,22 @@ function Adduser() {
           ...data,
           [name]: value
         }))
+
+        if(name == 'Reenter'){
+          if(value != data.Password)
+          {
+            setckpwd(true);
+          }
+          else
+            setckpwd(false);
+        }
       }
      
      
 
   return (
-    <div >
-        <h1>Create New user</h1>
-    
-    
+    <div className='App'>
+        <h1 className='userheading'>Create New user</h1>
     <form >
       <div className='wholecontent'>
        <div className="Name">
@@ -81,71 +88,49 @@ function Adduser() {
  <br/>
  
  
- 
+    <div className='passrenter'>
           <div className='Password'> 
           <label htmlFor='Password'>Password:</label> 
           <input type = "password" value = {data.Password} name= "Password"onChange = {handleChange} />
-          
-          </div>
+         <br></br> </div>
+         <br></br>
          <div className='Reenterpassword'>
          <label htmlFor='Password'>Re Enter:</label> 
- 
+        
           <input
              type = "password"
              name='Reenter'
              value = {data.Reenter}
              onChange = {handleChange}
           />
-          <PasswordChecklist
-             rules = {[
-                "capital",
-                "match",
-                "specialChar",
-                "minLength",
-                "lowercase",
-                "number",
-             ]}
-             minLength = {10}
-             value = {data.Password}
-             valueAgain = {data.Reenter}
-            
-          />
-          </div>
-          
-           
+          {ckpwd && <p>Password doesn't match</p>}
+          </div> 
+          </div> 
        </div>
  <br/>
    
    
    <div className="Language">
-    
-   <label htmlFor='Language'>Language:</label>
-             <select value={data.Language} name='Language' onChange={handleChange} required>
-                 <option value="">Chose an Language</option>
-                 <option value="English">English</option>
-                 <option value="Tamil">Tamil</option>
-              </select>
-              
-              <br/>
+  
+       <label htmlFor='Language'>Language:</label>
+         <input type='text'
+         id='Language'
+         value={data.Language}
+         name='Language'
+         onChange={handleChange}
+         required/>
+ <br/>
      </div>
      <br/>
  
-     <div className="Role">
-     <label htmlFor='Role'>Role:</label>
-             <select value={data.Role} onChange={handleChange} name="Role"required>
-             <option value="">Chose an Role</option>
-                 <option value="Translator">Translator</option>
-                 <option value="Reviewer">Reviewer</option>
-              </select>
-              
-              <br/>
-     </div>
-     </div>
+     
+     
      <br/>
        
        
        <div className='Submit'>
            <button type="submit" className='btn btn-primary' onClick={handleSubmit} >Create Account</button>
+       </div>
        </div>
      </form>
     </div>

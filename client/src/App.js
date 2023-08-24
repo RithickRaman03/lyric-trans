@@ -7,7 +7,6 @@ import UserDetails from './Pages/userDetails';
 const App=()=>{
 
   return (
-    <div className="container">
      <BrowserRouter>
      <Routes>
       <Route path='/' element={<Adduser/>}/>
@@ -15,7 +14,6 @@ const App=()=>{
       <Route path='/dashboard' element={<Dashboard/>}/>
      </Routes>
      </BrowserRouter>
-    </div>
   );  
 };
 

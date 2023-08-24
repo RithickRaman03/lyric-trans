@@ -1,36 +1,41 @@
 h1{
   
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: rgb(11, 134, 175);
 }
+    
 .wholecontent{
-  justify-content: first baseline;
+  border-radius: 20px;
+  border-color: black;
+  background-color:whitesmoke;
+  padding: 20px;
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.App{
+  background-color: black;
+  height: 100vw;
 }
 
 .Name{
   text-align: justify;
 }
 .Phone{
+  display: flex;
   align-content:start;
-
   text-align: start;
 }
-
-.firstrow{
-  
-  text-align: justify;
-  display: flex;
-  flex-direction: row;
-
-}
-.Password{
-  padding-left:20%;
-}
 .Reenterpassword{
-  
-    padding-left:5%;
-  }
-
-
+  padding-left: 10%;
+}
+.passrenter{
+  display: flex;
+  align-content: start;
+  flex-direction: row;
+}
 
 input[type=text]{
   width:200px;
@@ -129,7 +134,7 @@ input[type=button]{
   flex-direction: column;
   align-content: center;
   text-align: center;
-  color:black;
+  color:black;  
   
   
 }    
