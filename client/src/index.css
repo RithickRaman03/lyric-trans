@@ -1,14 +1,14 @@
 h1{
-  
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  background-color: rgb(11, 134, 175);
+ ;
 }
     
 .wholecontent{
-  border-radius: 20px;
-  border-color: black;
   background-color:whitesmoke;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 0px 20px;
 }
 body{
   margin: 0;
@@ -16,7 +16,7 @@ body{
 }
 
 .App{
-  background-color: black;
+  background-color:lightblue;
   height: 100vw;
 }
 
@@ -162,4 +162,9 @@ b:hover{
   background-color: aliceblue;
   border-radius: 10px;
   border-color: black;
+}
+#assignbutton{
+  background-color: rgb(152, 206, 223);
+  border-radius: 10px;
+  height:1%;
 }
