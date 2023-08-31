@@ -4,20 +4,24 @@ import axios from 'axios';
 function Adduser() {
     const [ckpwd, setckpwd] = useState(false);
     const [data,setData] = useState({
-        Username: "",
-        Email:"",
-        Phone:'',
-        Password:'',
-        Reenter:'',
-        Language:'',
-        Role:'',
+        Username: null,
+        Email:null,
+        Phone:null,
+        Password:null,
+        Reenter:null,
+        Language:null,
+        Role:null,
       })
       
       const handleSubmit=(e)=>{
-        e.preventDefault();
-        alert("Account Created")
+        // e.preventDefault();
+       
         console.log(data);
         console.log(data);
+        // if(!data.Email,!data.Language){
+        //   alert("Please Enter all the details")
+        // }
+       
         axios({
           method: 'POST',
           url: 'http://localhost:3008/userdata',
