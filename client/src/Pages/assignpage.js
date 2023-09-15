@@ -25,6 +25,7 @@ export default function Assignpage() {
           return (
             <div className='assigntask'>
             <h1>Assign Tasks</h1>
+            
                 <table class="table table-striped">
                     <thead>
                     <tr>

@@ -19,8 +19,8 @@ const pool = new Pool({
 
 app.post('/userdata',async(req ,res)=>{
     try{
-        const {Username,Email,Phone,Password,Language,Role}=req.body;
-        await pool.query(`INSERT INTO userinformation (name,email,phone,password,language,role) VALUES ($1,$2,$3,$4,$5,$6)`,[Username,Email,Phone,Password,Language,Role]);
+        const {Firstname,Lastname,Email,Phone,Password,Language}=req.body;
+        await pool.query(`INSERT INTO userinformation (firstname,lastname,email,phone,password,language) VALUES ($1,$2,$3,$4,$5,$6)`,[Firstname,Lastname,Email,Phone,Password,Language]);
         res.json("data is created")
     }
     catch(err){
@@ -29,6 +29,7 @@ app.post('/userdata',async(req ,res)=>{
 });
 app.get('/getuserdata',async(req,res)=>{
     const result=await pool.query("SELECT * FROM userinformation");
+    console.log(result);
     res.json(result.rows);
 })
 app.delete('/deletedata',async(req,res)=>{
@@ -47,6 +48,7 @@ app.get('/userdetails/:id',async(req,res)=>{
     const id = req.params.id
     const result = await pool.query("SELECT * FROM userinformation WHERE id=$1", [id]);
     res.json(result.rows);
+    // console.log(id);
 })
 app.get('/assigntask',async(req,res)=>{
     let data =await pool.query("SELECT name , role ,documents , id  FROM userinformation");

@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useLocation } from 'react-router-dom'
 import axios from 'axios';
 import '../index.css';
+import { MdCancel } from 'react-icons/md';
 
 
 function UserDetails() {
@@ -42,21 +43,22 @@ function UserDetails() {
     return (
        
         <div className='Detailsviewpage' >
-        <div className='detailheading'>
-            <h1>DETAILS OF {data.name}</h1>
-        </div>
-        
-        <br></br>
+             <div className='topbar'>
+        <MdCancel size={30}/>
+        <h1 className='addanewuser' >User details</h1>
+    </div>
+   
+
      
-       <p className='datas'><b>ID:</b>  {data.id}</p>
+       <p className='datas'><b>ID</b>  {data.id}</p>
         <br></br>
-        <p className='datas'><b>NAME:</b> {data.name}</p>
+        <p className='datas'><b>NAME</b> {data.name}</p>
         <br></br>
-        <p className='datas'><b>EMAIL:</b>{data.email}</p>
+        <p className='datas'><b>EMAIL</b>{data.email}</p>
         <br></br>
-        <p className='datas'><b>PHONE: </b> {data.phone}</p>
+        <p className='datas'><b>PHONE </b> {data.phone}</p>
         <br></br>
-        <p className='datas'><b>LANGUAGE:</b>{data.language}</p>
+        <p className='datas'><b>LANGUAGE</b>{data.language}</p>
         </div>
   
          

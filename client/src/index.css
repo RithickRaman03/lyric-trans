@@ -1,87 +1,145 @@
-h1{
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
- ;
+.addanewuser{
+  text-align: left;
+  font: normal normal 900 27px/33px Lato;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  margin-left: 10px;
+
 }
-    
+.popup{
+  width: 100%;
+  margin-top: 50px;
+  padding :10px 0;
+  background-color: white;
+  border:0;
+  outline:none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.userinformation{
+  color: #FFFFFF;
+  background-color: #2BB8E6BF;
+  width: 100%;
+}
+.userinformation h5{
+  margin-top: 7px;
+}
+.topmodal{
+  display: flex;
+  margin-top: 20px;
+  margin-left: 30px;
+}
 .wholecontent{
-  background-color:whitesmoke;
+  background-color:#FFFFFF;
   display: flex;
   flex-direction: column;
-  padding: 10px;
-  margin: 0px 20px;
+ 
 }
-body{
-  margin: 0;
-  padding: 0;
+.thebox{
+  margin-top: 2%;
+  display: flex;
+  flex-direction:row;
+  font-family: normal normal medium 19px/22px Raleway;;
+  color:#868686 ;
+  justify-content: space-between;
 }
 
 .App{
-  background-color:lightblue;
-  height: 100vw;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.firstrow{
+  width: 40%;
+}
+.secondrow{
+  width: 40%;
 }
 
-.Name{
+.Firstname{
+  display: flex;
   text-align: justify;
+  justify-content: space-between;
+}
+.Lastname{
+  display: flex;
+  text-align: justify;
+  justify-content: space-between;
 }
 .Phone{
   display: flex;
-  align-content:start;
-  text-align: start;
+}
+.Email{
+  display: flex;
+  justify-content: space-between;
+}
+.Language{
+  display: flex;
+  justify-content: space-between;
+}
+.Password{
+  display: flex;
+  justify-content: space-between;
+}
+.Phone{
+  display: flex;
+  justify-content: space-between;
 }
 .Reenterpassword{
-  padding-left: 10%;
-}
-.passrenter{
   display: flex;
-  align-content: start;
+  justify-content: space-between;
+}
+
+
+.topbar{
+  display: flex;
   flex-direction: row;
-}
-
-input[type=text]{
-  width:200px;
-  height: 40px;
-  border-radius: 10px;
-}
-
-input[type=email]{
-  width:200px;
-  height: 35px;
-  border-radius: 10px;;
-}
-
-input[type=tel]{
-  width:200px;
-  height: 35px;
-  border-radius: 10px;
-  display: flex ;
+  margin-top: 20px;
   
 }
 
+
+input[type=text]{
+border-radius: 10px;
+border-color: #868686;
+justify-content: flex-end;
+display: flex;
+}
+
+input[type=email]{
+border-radius: 10px;;
+border-color: #868686 ;
+}
+
+input[type=tel]{
+  border-radius: 10px;
+  border-color: #868686 ;
+}
+
 select{
-  width: 150px;;
-  height: 35px;
+  border-color: #868686 ;
   border-radius: 10px;
   display:flex;
 }
 
 
+
 input[type=submit]{
-  
-  width: 20em;  height: 2em;
-  
+  background-color: #2BB8E6;
   border-radius: 100%;
   text-align:center;
   align-content: center;
 }
 input[type=password]{
-  text-align: justify;
-  width:200px;
-  height: 35px;
-  border-radius: 10px;;
+   border-radius: 10px;
+  border-color: #707070;
 }
 .Submit{
   border-width: 10%;
   text-align: center;
+}
+.sub-but{
+  margin-top: 50px;
 }
 
 
@@ -105,17 +163,100 @@ input[type=button]{
 
 
 /* DASHBOARD */
+.dashboardtopbar{
+width: 100%;
+height:100px;
+background-color:white;
+display: flex;
+}
+.dashboardtopbar .profile{
+display: flex;
+margin-left: 390px;
+
+}
+.logo{
+height: 75px;
+width: 250px;
+padding-top: 20px;
+}
+
+.lens{
+
+border-color: black;
+height: 40px;
+align-self: center;
+border-radius: 10px;
+align-items: center;
+margin-right: 50px;
+}
+
+
+
+.search{
+padding-left: 10px;
+width: 250px;
+height: 40px;
+display: flex;
+align-self: center;
+border-radius: 10px;
+align-content: center;
+margin-left: 430px;
+
+}
+
+.profile{
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.notification{
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.account{
+  border-color: transparent;
+  background-color: transparent;
+}
+
 #editbutton{
-  /* border: 5px solid red; */
-  background-color: rgb(0, 204, 255);
+ background-color: #2BB8E6;
+ color: white;
+ border-radius: 3px 3px 3px 3px;
+  align-content: center;
+  display: flex;
+
 }
-#deletebutton{
-  background-color: red;
-}
+
+#editbutton:hover{
+  background-color:transparent;
+  color:#E6592B;
+  border: none;
+  }
+ 
 #detailbutton{
-  border-color: rgb(0, 26, 255);
-  border-bottom: 30px;
+border-color: #2BB8E6;
+background-color: transparent;
+border-width: 3px;
+
 }
+
+#detailbutton:hover{
+  background-color:transparent;
+  color:#E6592B;
+  border: none;
+  }
+ #deletebutton{
+  background-color: transparent;
+  border: none;
+ }
+
+ #deletebutton:hover{
+  background-color:transparent;
+  color:#E6592B;
+  border: none;
+  }
+
 .heading{
   text-align: left;
   background-color: aqua;
@@ -138,33 +279,38 @@ input[type=button]{
   
   
 }    
-.Detailsviewpage{
-  text-align: center;
-  display: flex; 
-  flex-direction: column;
-  align-content: center;
-  
-  break-inside: avoid-column;
-  background-position-x: center;
 
+.userbackbutton{
+  background-color: transparent;
+  border:none;
+  height: 50px;
 }
+
 b{
-  color:blue;
-  
+font-family:bold;
 }
-b:hover{
-  color: blueviolet;
+.downcontent{
+  background-color: #F2FBFE;
+}
+.table{
+  margin-left: 25px;
+}
+.searchbutton2{
+ margin-left: 45px;
+ margin-top: 20px;
+ margin-bottom: 40px;
+ display: flex;
+ }
+ .searchbutton2 input[type=text]{
+  border-radius: 0px !important;
+  width: 25%;
 
+ }
+
+ /* bootstrap */
+.modal-content{
+  height: 100%;
+  width: 100%;
 }
 
-.datas{
-  color:black;
-  background-color: aliceblue;
-  border-radius: 10px;
-  border-color: black;
-}
-#assignbutton{
-  background-color: rgb(152, 206, 223);
-  border-radius: 10px;
-  height:1%;
-}
+
