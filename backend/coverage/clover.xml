@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1695972892251" clover="3.2.0">
+  <project timestamp="1695972892251" name="All files">
+    <metrics statements="77" coveredstatements="73" conditionals="8" coveredconditionals="7" methods="8" coveredmethods="7" elements="93" coveredelements="87" complexity="0" loc="77" ncloc="77" packages="3" files="7" classes="7"/>
+    <package name="backend">
+      <metrics statements="17" coveredstatements="17" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="controller.js" path="C:\Users\RithickRaman\Desktop\llyric trans\backend\controller.js">
+        <metrics statements="17" coveredstatements="17" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="backend.config">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="database.js" path="C:\Users\RithickRaman\Desktop\llyric trans\backend\config\database.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="backend.routes">
+      <metrics statements="57" coveredstatements="53" conditionals="8" coveredconditionals="7" methods="8" coveredmethods="7"/>
+      <file name="deletedata.js" path="C:\Users\RithickRaman\Desktop\llyric trans\backend\routes\deletedata.js">
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+      </file>
+      <file name="editdata.js" path="C:\Users\RithickRaman\Desktop\llyric trans\backend\routes\editdata.js">
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+      </file>
+      <file name="getuserdata.js" path="C:\Users\RithickRaman\Desktop\llyric trans\backend\routes\getuserdata.js">
+        <metrics statements="8" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+      </file>
+      <file name="userdata.js" path="C:\Users\RithickRaman\Desktop\llyric trans\backend\routes\userdata.js">
+        <metrics statements="23" coveredstatements="22" conditionals="8" coveredconditionals="7" methods="4" coveredmethods="4"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="20" count="5" type="stmt"/>
+        <line num="21" count="5" type="stmt"/>
+        <line num="24" count="6" type="stmt"/>
+        <line num="25" count="6" type="stmt"/>
+        <line num="28" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="33" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="38" count="2" type="cond" truecount="3" falsecount="1"/>
+        <line num="39" count="2" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+      </file>
+      <file name="userdetails.js" path="C:\Users\RithickRaman\Desktop\llyric trans\backend\routes\userdetails.js">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

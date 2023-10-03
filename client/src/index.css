@@ -21,6 +21,7 @@
   color: #FFFFFF;
   background-color: #2BB8E6BF;
   width: 100%;
+  margin-left:10%;
 }
 .userinformation h5{
   margin-top: 7px;
@@ -34,7 +35,6 @@
   background-color:#FFFFFF;
   display: flex;
   flex-direction: column;
- 
 }
 .thebox{
   margin-top: 2%;
@@ -303,14 +303,55 @@ font-family:bold;
  }
  .searchbutton2 input[type=text]{
   border-radius: 0px !important;
-  width: 25%;
+  width: 50%;
+  
 
  }
 
  /* bootstrap */
-.modal-content{
-  height: 100%;
-  width: 100%;
+.footer{
+  border-width: 10%;
+  text-align: center;
+  margin-top: 60px;
+  
 }
 
+/* update modal box */
+.updateboxbody{
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+  .closeandheading{
+    display: flex;
+    flex-direction:row;
+  }
+  .updatecolumn1{
+    width: 40%;
+  }
+  .updatecolumn2{
+    width: 40%;
+  }
+#userinformation{
+  background-color: #2BB8E6;
+  margin-top: 10px;
+  margin-top: 10px;
+}
 
+.username{
+  display: flex;
+  text-align: justify;
+  justify-content: space-between;
+}
+
+.Role{
+  display: flex;
+  text-align: justify;
+  justify-content: space-between;
+}
+.language{
+  display: flex;
+  text-align: justify;
+  justify-content: space-between;
+}
