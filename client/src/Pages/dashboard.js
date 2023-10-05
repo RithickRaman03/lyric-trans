@@ -6,8 +6,10 @@ import "bootstrap/dist/css/bootstrap.css";
 const Dashboard = () => {
   const dasboardtitle = ["Name", "Role", "", "", ""];
   const [titles, setTitles] = useState([]);
-  const [isDeleted, setisDeleted] = useState(0);
+  const [searchterm, setsearchterm] = useState("");
   const [data, setData] = useState([]);
+  const [searchinputdata, setsearchinputdata] = useState([]);
+  const [isDeleted, setisDeleted] = useState(0);
   const [viewData, setViewData] = useState([]);
 
   const [changedData, setChangedData] = useState({
@@ -27,8 +29,8 @@ const Dashboard = () => {
       await axios
         .get("http://localhost:3008/getuserdata")
         .then((response) => {
-          console.log(data);
           setData(response.data);
+          setsearchinputdata(response.data);
           setTitles(Object.keys(response.data[0]));
         })
         .catch((error) => {
@@ -51,6 +53,27 @@ const Dashboard = () => {
       setisDeleted(!isDeleted);
     }
   };
+  const handleinputchange = (e) => {
+    if (e.target.value === "") {
+      setsearchterm("");
+      setsearchinputdata(data);
+    } else {
+      setsearchterm(e.target.value);
+    }
+  };
+
+  const handleFilter = () => {
+    console.log(searchterm);
+    const fildata = searchinputdata
+      .map((user) => {
+        if (user.first_name.includes(searchterm)) {
+          return user;
+        }
+        return null;
+      })
+      .filter((user) => user !== null);
+    setsearchinputdata(fildata);
+  };
 
   const handleEdit = (e) => {
     console.log(e);
@@ -69,8 +92,6 @@ const Dashboard = () => {
   const handledetails = (indidata) => {
     setViewData(indidata);
   };
-
-  console.log(viewData);
 
   const handleChanges = (e) => {
     const { name, value } = e.target;
@@ -115,9 +136,14 @@ const Dashboard = () => {
         </button>
         <div className="searchbutton2">
           <form>
-            <input type="text" placeholder="filter with name"></input>
+            <input
+              type="text"
+              placeholder="filter with name"
+              value={searchterm}
+              onChange={handleinputchange}
+            ></input>
           </form>
-          <button>
+          <button onClick={handleFilter}>
             <span class="material-symbols-outlined " size={100}>
               manage_search
             </span>
@@ -135,7 +161,7 @@ const Dashboard = () => {
             </thead>
 
             <tbody>
-              {data.map((indidata) => (
+              {searchinputdata.map((indidata) => (
                 <tr key={indidata.id}>
                   <td>{indidata.first_name}</td>
                   <td>{indidata.role_name}</td>
@@ -161,6 +187,7 @@ const Dashboard = () => {
                       onClick={() => {
                         handledetails(indidata);
                       }}
+                      id="editbutton"
                     >
                       Details
                     </button>
