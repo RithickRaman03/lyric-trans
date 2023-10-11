@@ -21,7 +21,7 @@
   color: #FFFFFF;
   background-color: #2BB8E6BF;
   width: 100%;
-  margin-left:10%;
+  
 }
 .userinformation h5{
   margin-top: 7px;
@@ -334,6 +334,7 @@ font-family:bold;
     width: 40%;
   }
 #userinformation{
+  margin-left: 80px;
   background-color: #2BB8E6;
   margin-top: 10px;
   margin-top: 10px;

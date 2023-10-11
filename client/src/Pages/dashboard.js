@@ -63,7 +63,6 @@ const Dashboard = () => {
   };
 
   const handleFilter = () => {
-    console.log(searchterm);
     const fildata = searchinputdata
       .map((user) => {
         if (user.first_name.includes(searchterm)) {
