@@ -5,13 +5,14 @@ const pool = require("../config/database");
 
 router.post("/userdata", async (req, res) => {
   try {
-    const { Firstname, Lastname, Email, Phone, Password, Language } = req.body;
+    const { Firstname, Lastname, Email, Phone, Password, Language, Role } =
+      req.body;
     console.log(req.body);
 
     const update = async () => {
       await pool.query(
-        "INSERT INTO user_table (first_name,last_name,email,phone_number,password,language_id,isactive) VALUES ($1,$2,$3,$4,$5,$6,true)",
-        [Firstname, Lastname, Email, Phone, Password, Language]
+        "INSERT INTO user_table (first_name,last_name,email,phone_number,password,language_id,isactive,role_id) VALUES ($1,$2,$3,$4,$5,$6,true,$7)",
+        [Firstname, Lastname, Email, Phone, Password, Language, Role]
       );
       res.status(200).json("updated");
       console.log(update);
